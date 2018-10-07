@@ -1,0 +1,12 @@
+#cloud-config
+users:
+  - name: vagrant
+    sudo: [ "ALL=(ALL) NOPASSWD:ALL" ]
+    ssh_pwauth: True
+    ssh_authorized_keys:
+      - 
+chpasswd:
+  list: |
+    root: amazonlinux2
+    vagrant: vagrant
+  expire: False
